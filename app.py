@@ -70,19 +70,19 @@ def handle_message(event):
             line_bot_api.reply_message(
                 event.reply_token,
                 TextSendMessage(text="Bot can't leave from 1:1 chat"))
-   if text == 'blackdragon':
-        if isinstance(event.source, SourceGroup):
-            line_bot_api.reply_message(
-                event.reply_token, TextSendMessage(text='BLACKDRAGON TEAM BOT'))
-        elif isinstance(event.source, SourceRoom):
-            line_bot_api.reply_message(
-                event.reply_token, TextSendMessage(text='BLACKDRAGON TEAM BOT'))
-   if text == 'hello':
-        if isinstance(event.source, SourceGroup):
-            line_bot_api.reply_message(
-                event.reply_token, TextSendMessage(text='Hello too'))
-        elif isinstance(event.source, SourceRoom):
-            line_bot_api.reply_message(
+    if text == 'blackdragon':
+         if isinstance(event.source, SourceGroup):
+             line_bot_api.reply_message(
+                 event.reply_token, TextSendMessage(text='BLACKDRAGON TEAM BOT'))
+         elif isinstance(event.source, SourceRoom):
+             line_bot_api.reply_message(
+                 event.reply_token, TextSendMessage(text='BLACKDRAGON TEAM BOT'))
+    if text == 'hello':
+         if isinstance(event.source, SourceGroup):
+             line_bot_api.reply_message(
+                 event.reply_token, TextSendMessage(text='Hello too'))
+         elif isinstance(event.source, SourceRoom):
+             line_bot_api.reply_message(
                 event.reply_token, TextSendMessage(text='Hello too'))  
 #=====[ TEMPLATE MESSAGE ]=============
     elif text == '/template':
